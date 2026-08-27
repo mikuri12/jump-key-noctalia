@@ -1,0 +1,34 @@
+/* Noctalia → JumpKey theme template
+   Input : noctalia material tokenset (colors.json)
+   Output: CSS override at :root[data-theme='noctalia'] */
+:root[data-theme='noctalia'] {
+  color-scheme: dark;
+  --jk-bg-page:              #11111b;
+  --jk-bg-surface:           #1e1e2e;
+  --jk-bg-surface-elevated:  #313244;
+  --jk-bg-surface-hover:     #313244;
+  --jk-border-strong:        #4c4f69;
+  --jk-text-muted:           #a3b4eb;
+  --jk-text-secondary:       #a3b4eb;
+  --jk-text-secondary-strong:#a3b4eb;
+  --jk-text-primary:         #cdd6f4;
+  --jk-text-primary-strong:  #cdd6f4;
+  --jk-text-high-contrast:   #cdd6f4;
+  --jk-accent-deep:          {{colors.primary.default.hex}};
+  --jk-accent-deep-hover:    {{colors.primary.default.hex}};
+  --jk-accent-strong:        {{colors.primary.default.hex}};
+  --jk-accent:               {{colors.primary.default.hex}};
+  --jk-accent-hover:         {{colors.primary.default.hex}};
+  --jk-accent-bright:        {{colors.primary.default.hex}};
+  --jk-accent-text:          #11111b;
+  --jk-accent-text-strong:   #11111b;
+  --jk-on-accent:            #11111b;
+  --jk-card-gradient-top:    #1e1e2e;
+  --jk-card-gradient-bottom: #313244;
+  --jk-card-border:          #313244;
+  --jk-card-shadow-color:    #11111b;
+  --jk-card-icon-bg:         #313244;
+}
+:root[data-theme='noctalia'][data-color-scheme='light'] {
+  color-scheme: light;
+}
