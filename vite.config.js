@@ -3,6 +3,8 @@ import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  // En GitHub Pages el sitio vive bajo /jump-key-noctalia/; en local queda en /
+  base: process.env.BASE_PATH || '/',
   plugins: [
     tailwindcss(),
     VitePWA({

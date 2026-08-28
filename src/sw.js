@@ -27,7 +27,7 @@ precacheAndRoute(self.__WB_MANIFEST);
 // noctalia.css: SIEMPRE red primero (lo regenera Noctalia fuera del build)
 //
 registerRoute(
-  ({ url }) => url.pathname === '/noctalia.css',
+  ({ url }) => url.pathname.endsWith('/noctalia.css'),
   new NetworkFirst({
     cacheName: 'noctalia-css',
     networkTimeoutSeconds: 3,

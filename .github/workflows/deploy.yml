@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['demo']
+    branches: ['main']
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -27,6 +28,8 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+        env:
+          BASE_PATH: /jump-key-noctalia/
 
       - uses: actions/upload-pages-artifact@v3
         with:
