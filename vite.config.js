@@ -16,6 +16,8 @@ export default defineConfig({
 
       injectManifest: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        // noctalia.css se regenera fuera del build: nunca al precache
+        globIgnores: ['**/noctalia.css'],
       },
 
       manifest: {

@@ -112,6 +112,11 @@ class DashboardApp extends LitElement {
     this.searchQuery = '';
     this.lang = detectLang();
     this.theme = loadTheme();
+    // Hot-reload CSS de Noctalia: escucha SSE para recalcular variables cuando
+    // el compositor aplica un nuevo palette del tema Noctalia seleccionado.
+    if (this.theme === 'noctalia') {
+      this._startNoctaliaWatch();
+    }
 
     // Timers & Modes
     this.resetTimeout = null;
@@ -968,6 +973,54 @@ class DashboardApp extends LitElement {
         }
       </main>
     `;
+  }
+_startNoctaliaWatch() {
+    if (this._noctaliaSSE) return;
+    try {
+      this._noctaliaSSE = new EventSource('/api/events');
+      this._noctaliaSSE.addEventListener('reload', () => {
+        if (this.theme === 'noctalia') {
+          this._reloadNoctaliaCSS();
+        }
+      });
+      this._noctaliaSSE.onerror = () => {
+        this._noctaliaSSE = null;
+        setTimeout(() => this._startNoctaliaWatch(), 5000);
+      };
+    } catch {
+      this._noctaliaPoll();
+    }
+  }
+
+  _reloadNoctaliaCSS() {
+    const ts = Date.now();
+    const old = this._noctaliaLink;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `/noctalia.css?ts=${ts}`;
+    link.dataset.noctaliaReload = 'true';
+    document.head.appendChild(link);
+    if (old && old.parentNode) {
+      old.parentNode.removeChild(old);
+    }
+    this._noctaliaLink = link;
+  }
+
+  _noctaliaPoll() {
+    if (this._noctaliaPollTimer) return;
+    this._noctaliaPollTimer = setInterval(() => {
+      if (this.theme !== 'noctalia') {
+        clearInterval(this._noctaliaPollTimer);
+        this._noctaliaPollTimer = null;
+        return;
+      }
+      fetch('/api/reload', { method: 'GET', cache: 'no-store' })
+        .then(r => r.json())
+        .then(d => {
+          if (d.ok && d.changed) this._reloadNoctaliaCSS();
+        })
+        .catch(() => {});
+    }, 5000);
   }
 }
 

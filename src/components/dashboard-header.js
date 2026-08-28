@@ -102,13 +102,13 @@ export class JkDashboardHeader extends LitElement {
             rel="noopener noreferrer"
             class="${styles.logoShell}"
           >
-            <img src="/jump-key.png" alt="JumpKey" class="${styles.logoImg}" />
+            <img src="/noctalia-logo.svg" alt="Noctalia" class="${styles.logoImg}" />
           </a>
 
           <div class="${styles.titleContainer}">
             <div class="${styles.brandTextWrapper}">
-              <span class="${styles.brandJump}">Jump</span>
-              <span class="${styles.brandKey}">Key</span>
+              <span class="${styles.brandJump}">Noc</span>
+              <span class="${styles.brandKey}">talia</span>
             </div>
 
             <button

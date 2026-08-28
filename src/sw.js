@@ -24,6 +24,21 @@ cleanupOutdatedCaches();
 precacheAndRoute(self.__WB_MANIFEST);
 
 //
+// noctalia.css: SIEMPRE red primero (lo regenera Noctalia fuera del build)
+//
+registerRoute(
+  ({ url }) => url.pathname === '/noctalia.css',
+  new NetworkFirst({
+    cacheName: 'noctalia-css',
+    networkTimeoutSeconds: 3,
+    plugins: [
+      new CacheableResponsePlugin({ statuses: [200] }),
+      new ExpirationPlugin({ maxEntries: 1, maxAgeSeconds: 60 * 60 }),
+    ],
+  })
+);
+
+//
 // SPA-Navigation immer aus dem Precache
 //
 const navigationHandler = createHandlerBoundToURL(import.meta.env.BASE_URL + 'index.html');

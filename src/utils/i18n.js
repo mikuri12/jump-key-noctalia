@@ -136,6 +136,8 @@ export const translations = {
     themeNordLightDesc: 'Kühle, weiche Flächen für ruhiges Arbeiten bei Tageslicht.',
     themeSolarizedLight: 'Solarized Light',
     themeSolarizedLightDesc: 'Warm und augenschonend mit ausgewogenen Blau-Tönen.',
+    themeNoctalia: 'Noctalia',
+    themeNoctaliaDesc: 'Farben synchron mit Noctalia.',
 
     // Config: Tab Import/Export
     tabData: 'Import & Export',
@@ -303,6 +305,8 @@ export const translations = {
     themeNordLightDesc: 'Des surfaces fraîches et douces pour travailler calmement en journée.',
     themeSolarizedLight: 'Solarized Light',
     themeSolarizedLightDesc: 'Chaleureux et reposant avec des tons bleus équilibrés.',
+    themeNoctalia: 'Noctalia',
+    themeNoctaliaDesc: 'Couleurs synchronisees avec Noctalia.',
     tabData: 'Importation et exportation',
     tabDataExport: 'Exporter',
     tabDataExportSuccess: 'Configuration exportée avec succès !',
@@ -463,6 +467,8 @@ export const translations = {
     themeNordLightDesc: 'Superficies frías y suaves para trabajar con calma durante el día.',
     themeSolarizedLight: 'Solarized Light',
     themeSolarizedLightDesc: 'Cálido y cómodo para la vista con tonos azules equilibrados.',
+    themeNoctalia: 'Noctalia',
+    themeNoctaliaDesc: 'Colores sincronizados con Noctalia.',
     tabData: 'Importar y exportar',
     tabDataExport: 'Exportar',
     tabDataExportSuccess: '¡Configuración exportada correctamente!',
@@ -629,6 +635,8 @@ export const translations = {
     themeNordLightDesc: 'Cool, soft surfaces for calm daytime work.',
     themeSolarizedLight: 'Solarized Light',
     themeSolarizedLightDesc: 'Warm and eye-friendly with balanced blue tones.',
+    themeNoctalia: 'Noctalia',
+    themeNoctaliaDesc: 'Dynamic colors synced with Noctalia.',
 
     // Config: Tab Import/Export
     tabData: 'Import & Export',

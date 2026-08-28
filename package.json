@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && { noctalia msg templates-apply; cp ~/.cache/noctalia/jump-key.css dist/noctalia.css; } || true",
     "preview": "vite preview"
   },
   "dependencies": {

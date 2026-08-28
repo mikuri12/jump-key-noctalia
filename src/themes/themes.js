@@ -142,6 +142,20 @@ export const THEMES = [
       text: '#073642',
     },
   },
+  {
+    id: 'noctalia',
+    scheme: 'light',
+    nameKey: 'themeNoctalia',
+    descriptionKey: 'themeNoctaliaDesc',
+    metaColor: '#ebe7dd',
+    preview: {
+      background: '#e7e3d9',
+      surface: '#ebe7dd',
+      accent: '#666666',
+      favorite: '#b58900',
+      text: '#666666',
+    },
+  },
 ];
 
 export function getTheme(themeId) {

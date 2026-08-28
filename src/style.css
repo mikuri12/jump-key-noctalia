@@ -1,5 +1,25 @@
 @import 'tailwindcss';
 
+@theme {
+  /* Esquinas cuadradas: anula toda la escala de radios de Tailwind
+     (rounded, rounded-md, rounded-lg, rounded-xl, rounded-2xl…) */
+  --radius: 0px;
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+
+  /* Tipografía: todo el texto usa la fuente del sistema/navegador */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  --font-mono: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+}
+
 .animate-fadeIn {
   animation: fadeIn 0.12s ease-out forwards;
 }
@@ -20,6 +40,12 @@
  * Existing Tailwind color utilities consume these CSS variables, so the
  * component markup stays focused on layout while the palette is centralized.
  */
+/* Fondo explícito del canvas: sin esto, con color-scheme: light el fondo
+   de la página queda blanco aunque --jk-bg-page tenga color */
+html {
+  background-color: var(--jk-bg-page);
+}
+
 :root,
 [data-theme='midnight'] {
   color-scheme: dark;
@@ -222,6 +248,37 @@
   --jk-card-border: #57514b;
   --jk-card-shadow-color: rgb(15 12 8 / 0.3);
   --jk-card-icon-bg: #45403a;
+}
+
+/* Tema Noctalia: fallback con la paleta actual (jiva paper); los valores
+   reales los genera el motor v5 en /noctalia.css al cambiar de paleta */
+[data-theme='noctalia'] {
+  color-scheme: light;
+  --jk-bg-page: #e7e3d9;
+  --jk-bg-surface: #ebe7dd;
+  --jk-bg-surface-elevated: #dbd7cc;
+  --jk-bg-surface-hover: #d3cec0;
+  --jk-border-strong: #85857e;
+  --jk-text-muted: #85857e;
+  --jk-text-secondary: #666666;
+  --jk-text-secondary-strong: #666666;
+  --jk-text-primary: #666666;
+  --jk-text-primary-strong: #666666;
+  --jk-text-high-contrast: #666666;
+  --jk-accent-deep: #424242;
+  --jk-accent-deep-hover: #525252;
+  --jk-accent-strong: #5c5c5c;
+  --jk-accent: #666666;
+  --jk-accent-hover: #707070;
+  --jk-accent-bright: #858585;
+  --jk-accent-text: #949494;
+  --jk-accent-text-strong: #a3a3a3;
+  --jk-on-accent: #f5f5f5;
+  --jk-card-gradient-top: #dbd7cc;
+  --jk-card-gradient-bottom: #ebe7dd;
+  --jk-card-border: #aaaaa5;
+  --jk-card-shadow-color: rgb(102 102 102 / 0.3);
+  --jk-card-icon-bg: #d3cec0;
 }
 
 [data-theme='daylight'] {
