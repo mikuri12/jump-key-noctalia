@@ -37,6 +37,10 @@ if git commit -q -m "chore(noctalia): actualizar paleta generada [auto]" -- publ
   if [ "$BRANCH" = "main" ]; then
     if GIT_TERMINAL_PROMPT=0 timeout 60 git push -q origin main 2>>"$LOG"; then
       log "push ok"
+      # El trigger por push no siempre dispara el workflow: lo lanzamos
+      # explícito. Si el push ya lo disparó, el concurrency group lo deduplica.
+      gh workflow run deploy.yml --repo mikuri12/jump-key-noctalia --ref main \
+        >/dev/null 2>&1 && log "deploy disparado" || log "aviso: no se pudo disparar el deploy"
     else
       log "push fallo (sin red?); el commit queda local"
     fi
