@@ -478,7 +478,7 @@ class DashboardApp extends LitElement {
       window.history.pushState({ view: 'continue' }, '');
     }
 
-    this.startResetTimer();
+
   }
 
   launchContinueSlot(slot) {
@@ -931,7 +931,8 @@ class DashboardApp extends LitElement {
                     this.showContinueView = false;
                     this.currentInput = key.toUpperCase();
 
-                    this.startResetTimer();
+
+
 
                     window.history.pushState({ view: 'category', key }, '');
                   }}
