@@ -190,17 +190,28 @@ class DashboardApp extends LitElement {
   }
 
   async saveConfiguration(updatedConfig) {
+    // Apply config in memory
+    if (updatedConfig.categories) {
+      this.categories = generateShortcuts(updatedConfig.categories);
+    } else {
+      this.categories = generateShortcuts(updatedConfig);
+    }
+
+    if (updatedConfig.searchEngines) {
+      this.searchEngines = updatedConfig.searchEngines;
+    }
+
+    // Always persist to localStorage
+    writeJsonStorage(STORAGE_KEYS.configCache, updatedConfig);
+
+    // Try WebDAV/backend save (works with Go server / Docker)
     try {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      const backupResponse = await fetch(`/config/services.backup-${timestamp}.json`, {
+      await fetch(`/config/services.backup-${timestamp}.json`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedConfig, null, 2),
       });
-
-      if (!backupResponse.ok) {
-        throw new Error('Failed to create configuration backup.');
-      }
 
       const response = await fetch('/config/services.json', {
         method: 'PUT',
@@ -208,27 +219,16 @@ class DashboardApp extends LitElement {
         body: JSON.stringify(updatedConfig, null, 2),
       });
 
-      if (response.ok) {
-        if (updatedConfig.categories) {
-          this.categories = generateShortcuts(updatedConfig.categories);
-        } else {
-          this.categories = generateShortcuts(updatedConfig);
-        }
-
-        if (updatedConfig.searchEngines) {
-          this.searchEngines = updatedConfig.searchEngines;
-        }
-
-        this.showConfigModal = false;
-
-        this.showToast(this.t('editConfigSaveDone'), 'success');
-      } else {
-        this.showToast(this.t('editConfigSaveFailed'), 'error');
+      if (!response.ok) {
+        console.warn('Backend save failed, config saved to localStorage only.');
       }
-    } catch (error) {
-      console.error('WebDAV Error:', error);
-      this.showToast(this.t('editConfigSaveFailed'), 'error');
+    } catch {
+      // Static hosting (GitHub Pages) — localStorage save is enough
+      console.warn('No backend available, config saved to localStorage.');
     }
+
+    this.showConfigModal = false;
+    this.showToast(this.t('editConfigSaveDone'), 'success');
   }
 
   async handleSaveConfig(e) {
@@ -244,18 +244,21 @@ class DashboardApp extends LitElement {
     super.connectedCallback();
     this.theme = saveTheme(this.theme);
 
-    try {
-      const res = await fetch('./config/services.json');
-      if (!res.ok) throw new Error(`Configuration request failed: ${res.status}`);
-      const data = await res.json();
-      writeJsonStorage(STORAGE_KEYS.configCache, data);
-      this.categories = generateShortcuts(data.categories || data);
-      this.searchEngines = data.searchEngines || [];
-    } catch {
-      const data = readJsonStorage(STORAGE_KEYS.configCache, null);
-      if (data) {
+    // Prefer localStorage config (user edits) over static file
+    const cached = readJsonStorage(STORAGE_KEYS.configCache, null);
+    if (cached) {
+      this.categories = generateShortcuts(cached.categories || cached);
+      this.searchEngines = cached.searchEngines || [];
+    } else {
+      try {
+        const res = await fetch('./config/services.json');
+        if (!res.ok) throw new Error(`Configuration request failed: ${res.status}`);
+        const data = await res.json();
+        writeJsonStorage(STORAGE_KEYS.configCache, data);
         this.categories = generateShortcuts(data.categories || data);
         this.searchEngines = data.searchEngines || [];
+      } catch {
+        // No config available
       }
     }
 
