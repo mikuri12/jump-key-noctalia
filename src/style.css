@@ -590,13 +590,13 @@ html {
 .jk-service-card {
   background: var(--jk-card-background);
   border-color: var(--jk-card-border);
-  box-shadow: var(--jk-card-shadow);
+  box-shadow: none;
 }
 
 .jk-service-card:hover {
   background: var(--jk-card-background-hover);
   border-color: color-mix(in srgb, var(--jk-card-border) 58%, var(--jk-accent) 42%);
-  box-shadow: var(--jk-card-shadow-hover);
+  box-shadow: none;
 }
 
 .jk-service-card-icon {
@@ -614,9 +614,7 @@ html {
 .jk-favorite-card {
   background: var(--jk-card-favorite-background);
   border-color: var(--jk-card-favorite-border);
-  box-shadow:
-    var(--jk-card-favorite-shadow),
-    inset 1px 0 0 var(--jk-card-favorite-inset);
+  box-shadow: none;
 }
 
 .jk-favorite-card::after {
@@ -637,9 +635,7 @@ html {
     color-mix(in srgb, var(--jk-card-favorite-bottom) 96%, var(--jk-accent) 4%)
   );
   border-color: color-mix(in srgb, var(--jk-card-favorite-border) 75%, var(--jk-accent) 25%);
-  box-shadow:
-    0 16px 34px color-mix(in srgb, var(--jk-card-shadow-color) 78%, var(--jk-favorite) 22%),
-    inset 1px 0 0 var(--jk-card-favorite-inset);
+  box-shadow: none;
 }
 
 .jk-favorite-card .jk-service-card-icon {
@@ -662,13 +658,13 @@ html {
 }
 
 .jk-shadow-card {
-  box-shadow: var(--jk-shadow-card);
+  box-shadow: none;
 }
 .jk-shadow-elevated {
-  box-shadow: var(--jk-shadow-elevated);
+  box-shadow: none;
 }
 .jk-shadow-inset {
-  box-shadow: var(--jk-shadow-inset);
+  box-shadow: none;
 }
 
 [data-color-scheme='light'] {
