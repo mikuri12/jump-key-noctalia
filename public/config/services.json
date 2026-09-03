@@ -1,15 +1,185 @@
 {
   "categories": [
     {
-      "category": "web",
-      "categoryKey": "w",
-      "icon": "message-square",
+      "category": "Coding",
+      "categoryKey": "c",
+      "icon": "code",
       "services": [
         {
-          "name": "JumpKey",
-          "url": "https://github.com/desirevolution/jump-key",
-          "icon": "house",
-          "key": "j"
+          "name": "GitHub",
+          "url": "https://github.com",
+          "key": "g",
+          "icon": "iconify:simple-icons:github"
+        },
+        {
+          "name": "GitLab",
+          "url": "https://gitlab.com",
+          "key": "l",
+          "icon": "iconify:logos:gitlab"
+        },
+        {
+          "name": "Codeberg",
+          "url": "https://codeberg.org",
+          "key": "c",
+          "icon": "https://cdn.simpleicons.org/codeberg"
+        },
+        {
+          "name": "Stack Overflow",
+          "url": "https://stackoverflow.com",
+          "key": "s",
+          "icon": "https://cdn.simpleicons.org/stackoverflow"
+        },
+        {
+          "name": "DevDocs",
+          "url": "https://devdocs.io",
+          "key": "d",
+          "icon": "https://cdn.simpleicons.org/readthedocs"
+        },
+        {
+          "name": "Hugging Face",
+          "url": "https://huggingface.co",
+          "key": "h",
+          "icon": "https://cdn.simpleicons.org/huggingface"
+        },
+        {
+          "name": "Nix Wiki",
+          "url": "https://wiki.nixos.org",
+          "key": "w",
+          "icon": "https://cdn.simpleicons.org/nixos"
+        },
+        {
+          "name": "Nixpkgs Search",
+          "url": "https://search.nixos.org/packages",
+          "key": "n",
+          "icon": "https://cdn.simpleicons.org/nixos"
+        },
+        {
+          "name": "Crates.io",
+          "url": "https://crates.io",
+          "key": "r",
+          "icon": "https://cdn.simpleicons.org/rust"
+        },
+        {
+          "name": "Home Manager",
+          "url": "https://nix-community.github.io/home-manager/options.xhtml",
+          "key": "m",
+          "icon": "https://cdn.simpleicons.org/nixos"
+        },
+        {
+          "name": "Iceberg",
+          "url": "https://iceberg-editor.github.io",
+          "key": "i",
+          "icon": "code"
+        }
+      ]
+    },
+    {
+      "category": "Anime",
+      "categoryKey": "a",
+      "icon": "lucide:tv",
+      "services": [
+        {
+          "name": "AnimeFLV",
+          "url": "https://www3.animeflv.net",
+          "key": "f",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=animeflv.net"
+        },
+        {
+          "name": "JKAnime",
+          "url": "https://jkanime.net",
+          "key": "j",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=jkanime.net"
+        },
+        {
+          "name": "TioAnime",
+          "url": "https://tioanime.com",
+          "key": "t",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=tioanime.com"
+        },
+        {
+          "name": "MonosChinos",
+          "url": "https://monoschinos2.com",
+          "key": "m",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=monoschinos2.com"
+        },
+        {
+          "name": "AnimeFenix",
+          "url": "https://animefenix.tv",
+          "key": "x",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=animefenix.tv"
+        },
+        {
+          "name": "Latanime",
+          "url": "https://latanime.org",
+          "key": "l",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=latanime.org"
+        },
+        {
+          "name": "HiAnime",
+          "url": "https://hianime.to",
+          "key": "h",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=hianime.to"
+        },
+        {
+          "name": "AnimePahe",
+          "url": "https://animepahe.ru",
+          "key": "p",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=animepahe.ru"
+        },
+        {
+          "name": "MyAnimeList",
+          "url": "https://myanimelist.net",
+          "key": "y",
+          "icon": "https://cdn.simpleicons.org/myanimelist"
+        },
+        {
+          "name": "AniList",
+          "url": "https://anilist.co",
+          "key": "z",
+          "icon": "https://cdn.simpleicons.org/anilist"
+        }
+      ]
+    },
+    {
+      "category": "Redes",
+      "categoryKey": "r",
+      "icon": "lucide:message-circle",
+      "services": [
+        {
+          "name": "Discord",
+          "url": "https://discord.com/app",
+          "key": "d",
+          "icon": "https://cdn.simpleicons.org/discord"
+        },
+        {
+          "name": "Reddit",
+          "url": "https://reddit.com",
+          "key": "r",
+          "icon": "https://cdn.simpleicons.org/reddit"
+        },
+        {
+          "name": "WhatsApp",
+          "url": "https://web.whatsapp.com",
+          "key": "w",
+          "icon": "https://cdn.simpleicons.org/whatsapp"
+        },
+        {
+          "name": "Telegram",
+          "url": "https://web.telegram.org",
+          "key": "t",
+          "icon": "https://cdn.simpleicons.org/telegram"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://youtube.com",
+          "key": "y",
+          "icon": "https://cdn.simpleicons.org/youtube"
+        },
+        {
+          "name": "X / Twitter",
+          "url": "https://x.com",
+          "key": "x",
+          "icon": "https://cdn.simpleicons.org/x"
         }
       ]
     }
@@ -19,7 +189,55 @@
       "prefix": "g",
       "name": "Google",
       "url": "https://www.google.com/search?q=%s",
-      "icon": "https://cdn.simpleicons.org/google"
+      "icon": "iconify:logos:google-icon"
+    },
+    {
+      "prefix": "ddg",
+      "name": "DuckDuckGo",
+      "url": "https://duckduckgo.com/?q=%s",
+      "icon": "https://cdn.simpleicons.org/duckduckgo"
+    },
+    {
+      "prefix": "yt",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=%s",
+      "icon": "iconify:logos:youtube-icon"
+    },
+    {
+      "prefix": "gh",
+      "name": "GitHub",
+      "url": "https://github.com/search?q=%s",
+      "icon": "iconify:simple-icons:github"
+    },
+    {
+      "prefix": "nix",
+      "name": "Nix Packages",
+      "url": "https://search.nixos.org/packages?query=%s",
+      "icon": "https://cdn.simpleicons.org/nixos"
+    },
+    {
+      "prefix": "r",
+      "name": "Reddit",
+      "url": "https://www.reddit.com/search/?q=%s",
+      "icon": "https://cdn.simpleicons.org/reddit"
+    },
+    {
+      "prefix": "wiki",
+      "name": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Special:Search?search=%s",
+      "icon": "https://cdn.simpleicons.org/wikipedia"
+    },
+    {
+      "prefix": "a",
+      "name": "AnimeFLV",
+      "url": "https://www3.animeflv.net/browse?q=%s",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=animeflv.net"
+    },
+    {
+      "prefix": "mal",
+      "name": "MyAnimeList",
+      "url": "https://myanimelist.net/search/all?q=%s",
+      "icon": "https://cdn.simpleicons.org/myanimelist"
     }
   ]
 }
