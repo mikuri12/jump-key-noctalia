@@ -4,7 +4,7 @@ import './icon-button.js';
 
 // 1. Static styling dictionary isolating layouts from the rendering engine
 const styles = {
-  container: `sticky top-0 z-50 flex flex-nowrap items-center justify-between gap-4 rounded-2xl border border-slate-700/70 bg-gradient-to-br from-slate-900/95 to-slate-800/90 px-4 py-4 sm:px-6 sm:py-5 jk-shadow-card backdrop-blur-md`,
+  container: `sticky top-0 z-50 flex flex-nowrap items-center justify-between gap-4 rounded-2xl border border-slate-700/70 bg-slate-900/98 px-4 py-4 sm:px-6 sm:py-5 jk-shadow-card`,
   logoShell: `group flex items-center justify-center size-12 sm:size-14 shrink-0 rounded-xl bg-slate-700/60 ring-1 ring-slate-600/70 transition-all duration-300 hover:bg-indigo-500/15 hover:ring-indigo-500/40 hover:-translate-y-0.5`,
   logoMark: `inline-block size-9 sm:size-11 shrink-0 transition-all duration-300 group-hover:scale-105`,
   titleContainer: `flex items-center gap-2 min-w-0`,

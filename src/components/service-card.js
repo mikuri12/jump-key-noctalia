@@ -9,7 +9,7 @@ const styles = {
   cardDefault: `jk-service-card hover:-translate-y-1 active:scale-[0.98]`,
   cardPressing: `jk-service-card scale-[0.985] border-indigo-500/40 jk-shadow-inset`,
   cardReady: `jk-service-card scale-[0.99] border-indigo-400/70 ring-2 ring-indigo-400/20`,
-  glow: `pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500/0 via-indigo-500/4 to-indigo-500/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100`,
+  glow: `pointer-events-none absolute inset-0 rounded-2xl opacity-0`,
   iconContainer: `jk-service-card-icon relative z-10 flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border transition-all duration-200 ease-out`,
   iconDefault: `group-hover:-translate-y-0.5`,
   iconPressing: `scale-95`,
@@ -228,11 +228,11 @@ export class JkServiceCard extends LitElement {
 
   _getBadgeClasses() {
     if (this.isReady) {
-      return 'border-indigo-400/60 bg-indigo-500/30 text-slate-50 shadow-md shadow-indigo-500/20';
+      return 'border-indigo-400/60 bg-indigo-500/30 text-slate-50';
     }
 
     if (this.isFavorite) {
-      return 'border-indigo-500 bg-indigo-500/20 text-indigo-200 shadow-lg shadow-indigo-500/20';
+      return 'border-indigo-500 bg-indigo-500/20 text-indigo-200';
     }
 
     return 'border-slate-600 bg-slate-900/80 text-slate-300';
@@ -344,13 +344,9 @@ export class JkServiceCard extends LitElement {
             0%,
             100% {
               opacity: 0.75;
-              box-shadow: 0 0 8px var(--jk-accent-glow-soft);
             }
             50% {
               opacity: 1;
-              box-shadow:
-                0 0 14px var(--jk-accent-glow),
-                0 0 24px var(--jk-accent-glow-soft);
             }
           }
 

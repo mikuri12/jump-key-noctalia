@@ -3,7 +3,7 @@ import './icon.js';
 
 const styles = {
   badgeBase:
-    'fixed bottom-6 right-6 z-50 hidden sm:flex min-h-12 items-center gap-2 rounded-xl border bg-slate-900/95 px-3 py-2 shadow-xl backdrop-blur-sm transition-all duration-200 animate-fadeIn pointer-events-none select-none',
+    'fixed bottom-6 right-6 z-50 hidden sm:flex min-h-12 items-center gap-2 rounded-xl border bg-slate-900/95 px-3 py-2 transition-all duration-200 animate-fadeIn pointer-events-none select-none',
   badgeDefault: 'border-slate-600/80 text-slate-100 shadow-slate-950/50',
   badgeValid: 'jk-status-success-surface shadow-lg',
   badgeInvalid: 'jk-status-danger-surface shadow-lg',

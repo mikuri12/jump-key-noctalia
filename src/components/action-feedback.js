@@ -5,7 +5,7 @@ const DISPLAY_DURATION = 1200;
 
 const styles = {
   container:
-    'fixed bottom-6 left-1/2 z-50 hidden min-w-72 max-w-sm -translate-x-1/2 items-center gap-3 rounded-xl border border-emerald-500/40 bg-slate-900/95 px-4 py-3 shadow-xl shadow-emerald-950/40 backdrop-blur-sm sm:flex pointer-events-none select-none animate-fadeIn',
+    'fixed bottom-6 left-1/2 z-50 hidden min-w-72 max-w-sm -translate-x-1/2 items-center gap-3 rounded-xl border border-emerald-500/40 bg-slate-900/95 px-4 py-3 sm:flex pointer-events-none select-none animate-fadeIn',
   iconWrap:
     'flex size-11 shrink-0 items-center justify-center rounded-lg border border-slate-700 bg-slate-800 text-emerald-300',
   icon: 'size-6',

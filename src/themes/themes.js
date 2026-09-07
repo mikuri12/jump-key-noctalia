@@ -151,9 +151,9 @@ export const THEMES = [
     preview: {
       background: '#e7e3d9',
       surface: '#ebe7dd',
-      accent: '#666666',
-      favorite: '#b58900',
-      text: '#666666',
+      accent: '#a8827e',
+      favorite: '#9a7a5a',
+      text: '#4a463e',
     },
   },
 ];
