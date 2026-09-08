@@ -2,13 +2,13 @@
 :root[data-theme='noctalia'] {
   color-scheme: dark;
   /* ── Backgrounds ── */
-  --jk-bg-page: #110f0d !important;
-  --jk-bg-surface: #231e1a !important;
-  --jk-bg-surface-elevated: #3b322b !important;
-  --jk-bg-surface-hover: #362d26 !important;
+  --jk-bg-page: #150e0a !important;
+  --jk-bg-surface: #291d14 !important;
+  --jk-bg-surface-elevated: #453021 !important;
+  --jk-bg-surface-hover: #3e2b1e !important;
 
   /* ── Borders ── */
-  --jk-border-strong: #75675c !important;
+  --jk-border-strong: #74675f !important;
 
   /* ── Text hierarchy ── */
   --jk-text-muted: #716861 !important;
@@ -19,30 +19,30 @@
   --jk-text-high-contrast: #dfdddd !important;
 
   /* ── Accent: uses primary from Noctalia ── */
-  --jk-accent-deep: #c7773e !important;
-  --jk-accent-deep-hover: #ce8855 !important;
-  --jk-accent-strong: #d29365 !important;
-  --jk-accent: #d79e75 !important;
-  --jk-accent-hover: #dca985 !important;
-  --jk-accent-bright: #e5bfa4 !important;
-  --jk-accent-text: #ecd0bc !important;
-  --jk-accent-text-strong: #f3e1d4 !important;
-  --jk-on-accent: #221e1b !important;
+  --jk-accent-deep: #dd7326 !important;
+  --jk-accent-deep-hover: #e28441 !important;
+  --jk-accent-strong: #e49052 !important;
+  --jk-accent: #e79b64 !important;
+  --jk-accent-hover: #eaa676 !important;
+  --jk-accent-bright: #efbd99 !important;
+  --jk-accent-text: #f3ceb3 !important;
+  --jk-accent-text-strong: #f7dfce !important;
+  --jk-on-accent: #251e18 !important;
 
   /* ── Cards: matte, no glow ── */
-  --jk-card-gradient-top: #3b322b !important;
-  --jk-card-gradient-bottom: #231e1a !important;
-  --jk-card-border: #75675c !important;
-  --jk-card-shadow-color: #231e1a !important;
-  --jk-card-icon-bg: #362d26 !important;
+  --jk-card-gradient-top: #453021 !important;
+  --jk-card-gradient-bottom: #291d14 !important;
+  --jk-card-border: #74675f !important;
+  --jk-card-shadow-color: #291d14 !important;
+  --jk-card-icon-bg: #3e2b1e !important;
 
   /* ── Favorites: uses secondary from Noctalia ── */
-  --jk-favorite: #c7c06b !important;
-  --jk-favorite-edge: #cfc981 !important;
+  --jk-favorite: #e4d84e !important;
+  --jk-favorite-edge: #e8de69 !important;
 
   /* ── Status colors: uses tertiary + error from Noctalia ── */
-  --jk-success: #9fc270 !important;
-  --jk-warning: #bfb755 !important;
+  --jk-success: #a5e44e !important;
+  --jk-warning: #e0d233 !important;
   --jk-danger: #e07d35 !important;
-  --jk-info: #e0b495 !important;
+  --jk-info: #ecb287 !important;
 }
