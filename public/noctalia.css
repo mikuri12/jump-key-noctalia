@@ -2,47 +2,47 @@
 :root[data-theme='noctalia'] {
   color-scheme: dark;
   /* ── Backgrounds ── */
-  --jk-bg-page: #252c30 !important;
-  --jk-bg-surface: #232a2e !important;
-  --jk-bg-surface-elevated: #2d353b !important;
-  --jk-bg-surface-hover: #363f47 !important;
+  --jk-bg-page: #231f1c !important;
+  --jk-bg-surface: #1c1917 !important;
+  --jk-bg-surface-elevated: #403833 !important;
+  --jk-bg-surface-hover: #4b423c !important;
 
   /* ── Borders ── */
-  --jk-border-strong: #555c54 !important;
+  --jk-border-strong: #62696d !important;
 
   /* ── Text hierarchy ── */
-  --jk-text-muted: #7a8478 !important;
-  --jk-text-secondary: #d3c6aa !important;
-  --jk-text-secondary-strong: #ccbd9d !important;
-  --jk-text-primary: #859289 !important;
-  --jk-text-primary-strong: #7a887f !important;
-  --jk-text-high-contrast: #707e75 !important;
+  --jk-text-muted: #888f94 !important;
+  --jk-text-secondary: #888f94 !important;
+  --jk-text-secondary-strong: #7d858a !important;
+  --jk-text-primary: #b4bdc3 !important;
+  --jk-text-primary-strong: #a9b3ba !important;
+  --jk-text-high-contrast: #9da9b1 !important;
 
   /* ── Accent: uses primary from Noctalia ── */
-  --jk-accent-deep: #85a652 !important;
-  --jk-accent-deep-hover: #94b265 !important;
-  --jk-accent-strong: #9eb972 !important;
-  --jk-accent: #a7c080 !important;
-  --jk-accent-hover: #b0c78e !important;
-  --jk-accent-bright: #c3d4a9 !important;
-  --jk-accent-text: #d2debd !important;
-  --jk-accent-text-strong: #e0e9d2 !important;
-  --jk-on-accent: #232a2e !important;
+  --jk-accent-deep: #8c9aa3 !important;
+  --jk-accent-deep-hover: #9da9b1 !important;
+  --jk-accent-strong: #a9b3ba !important;
+  --jk-accent: #b4bdc3 !important;
+  --jk-accent-hover: #bfc7cc !important;
+  --jk-accent-bright: #d6dbde !important;
+  --jk-accent-text: #e7eaec !important;
+  --jk-accent-text-strong: #f8f9f9 !important;
+  --jk-on-accent: #1c1917 !important;
 
   /* ── Cards: matte, no glow ── */
-  --jk-card-gradient-top: #2d353b !important;
-  --jk-card-gradient-bottom: #232a2e !important;
-  --jk-card-border: #555c54 !important;
-  --jk-card-shadow-color: #475258 !important;
-  --jk-card-icon-bg: #363f47 !important;
+  --jk-card-gradient-top: #403833 !important;
+  --jk-card-gradient-bottom: #1c1917 !important;
+  --jk-card-border: #62696d !important;
+  --jk-card-shadow-color: #1c1917 !important;
+  --jk-card-icon-bg: #4b423c !important;
 
   /* ── Favorites: uses secondary from Noctalia ── */
-  --jk-favorite: #d3c6aa !important;
-  --jk-favorite-edge: #ddd4be !important;
+  --jk-favorite: #888f94 !important;
+  --jk-favorite-edge: #989ea2 !important;
 
   /* ── Status colors: uses tertiary + error from Noctalia ── */
-  --jk-success: #9da9a0 !important;
-  --jk-warning: #c9b896 !important;
-  --jk-danger: #e67e80 !important;
-  --jk-info: #bace9b !important;
+  --jk-success: #9f948f !important;
+  --jk-warning: #788085 !important;
+  --jk-danger: #de6e7c !important;
+  --jk-info: #cbd1d5 !important;
 }
