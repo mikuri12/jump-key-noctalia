@@ -19,14 +19,14 @@
   --jk-text-high-contrast: #acbbed !important;
 
   /* ── Accent: uses primary from Noctalia ── */
-  --jk-accent-deep: #eb85cf !important;
-  --jk-accent-deep-hover: #ef9fd9 !important;
-  --jk-accent-strong: #f2b0e0 !important;
-  --jk-accent: #f5c2e7 !important;
-  --jk-accent-hover: #f8d4ee !important;
-  --jk-accent-bright: #fef7fc !important;
-  --jk-accent-text: #ffffff !important;
-  --jk-accent-text-strong: #ffffff !important;
+  --jk-accent-deep: #35aee3 !important;
+  --jk-accent-deep-hover: #50b9e7 !important;
+  --jk-accent-strong: #62c0ea !important;
+  --jk-accent: #74c7ec !important;
+  --jk-accent-hover: #86ceee !important;
+  --jk-accent-bright: #aaddf3 !important;
+  --jk-accent-text: #c5e8f7 !important;
+  --jk-accent-text-strong: #e0f2fb !important;
   --jk-on-accent: #1e1e2e !important;
 
   /* ── Cards: matte, no glow ── */
@@ -37,12 +37,12 @@
   --jk-card-icon-bg: #3a3b50 !important;
 
   /* ── Favorites: uses secondary from Noctalia ── */
-  --jk-favorite: #fab387 !important;
-  --jk-favorite-edge: #fbc6a4 !important;
+  --jk-favorite: #89b4fa !important;
+  --jk-favorite-edge: #a6c7fb !important;
 
   /* ── Status colors: uses tertiary + error from Noctalia ── */
-  --jk-success: #94e2d5 !important;
-  --jk-warning: #f9a06a !important;
+  --jk-success: #89dceb !important;
+  --jk-warning: #6ca1f9 !important;
   --jk-danger: #f38ba8 !important;
-  --jk-info: #fbe5f5 !important;
+  --jk-info: #98d5f1 !important;
 }
